@@ -3,7 +3,7 @@ import { Layout, Row, Col, Image, Typography, Card } from 'antd';
 import { Button } from 'antd';
 import { Carousel } from 'antd';
 import './App.css';
-import logo from './logo.svg';
+import logo from './logo.png';
 import OrderForm from './OrderForm';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -21,15 +21,10 @@ const contentStyle = {
 const App = () => (
   <Layout>
     <Header>
-      <Row>
-        <Col span={8}>
-          <img src={logo} className="app-logo" alt="Logo" />
-        </Col>
-        <Col span={16}>col-12</Col>
-      </Row>
+      <img src={logo} className="app-logo" alt="Logo" />
     </Header>
     <Content>
-      <Carousel>
+      {/* <Carousel>
         <div className="cover">
           <Row>
             <Col span={12}>
@@ -42,9 +37,9 @@ const App = () => (
         <div>
           <h3 style={contentStyle}>2</h3>
         </div>
-      </Carousel>
+      </Carousel> */}
       <Card
-        title="Create new order"
+        title="رفع طلب جديد"
         bordered={false}
         style={{
           textAlign: 'center',
@@ -56,7 +51,7 @@ const App = () => (
         <OrderForm />
       </Card>
     </Content>
-    <Footer>Footer</Footer>
+    {/* <Footer>Footer</Footer> */}
   </Layout>
 );
 
