@@ -1,7 +1,12 @@
 @import '~antd/dist/antd.css';
 
 .ant-layout-header {
-  background-color: #fff;
+  background-color: #f0f2f5;
+  margin: 15px auto;
+}
+
+.ant-btn-primary {
+  background-color: #18b4af;
 }
 
 .App {
@@ -9,7 +14,7 @@
 }
 
 .app-logo {
-  max-height: 60px;
+  max-height: 70px;
   pointer-events: none;
 }
 

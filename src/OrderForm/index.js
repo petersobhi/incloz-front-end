@@ -120,7 +120,7 @@ export default class OrderForm extends React.Component {
 
     if (rawResponse.ok) {
       notification.success({
-        message: 'تم ارسال الطلب بنجاح',
+        message: '',
       });
     }
   };
@@ -140,7 +140,7 @@ export default class OrderForm extends React.Component {
         <Form.Item
           label="كود التعريف"
           name="merchant"
-          rules={[{ required: true, message: 'أدخل كود التعريف' }]}
+          rules={[{ required: true, message: '' }]}
         >
           <Input />
         </Form.Item>
@@ -148,7 +148,7 @@ export default class OrderForm extends React.Component {
           <Col span={12}>
             <Form.Item
               name="customer_name"
-              rules={[{ required: true, message: 'أدخل أسم العميل' }]}
+              rules={[{ required: true, message: '' }]}
             >
               <Input placeholder="أسم العميل" />
             </Form.Item>
@@ -157,20 +157,18 @@ export default class OrderForm extends React.Component {
               rules={[
                 {
                   required: true,
-                  message: 'أدخل رقم العميل',
+                  message: '',
                 },
               ]}
             >
-              <Input
-                prefix={<UserOutlined className="site-form-item-icon" />}
-                placeholder="رقم تليفون العميل"
-              />
+              <Input placeholder="رقم تليفون العميل" />
             </Form.Item>
 
-            <Form.Item
-              name="cash"
-              rules={[{ required: true, message: ' أدخل المبلغ المطلوب' }]}
-            >
+            <Form.Item name="customer_phone_number_alternate">
+              <Input placeholder=" رقم تليفون العميل الاحطياطي" />
+            </Form.Item>
+
+            <Form.Item name="cash" rules={[{ required: true, message: '' }]}>
               <InputNumber
                 placeholder="المبلغ المطلوب"
                 style={{ width: '100%' }}
@@ -179,7 +177,7 @@ export default class OrderForm extends React.Component {
 
             <Form.Item
               name="estimated_weight"
-              rules={[{ required: true, message: ' أدخل الوزن التقريبي' }]}
+              rules={[{ required: true, message: '' }]}
             >
               <InputNumber
                 placeholder="الوزن التقريبي (كيلوجرام)"
@@ -194,7 +192,7 @@ export default class OrderForm extends React.Component {
                 {
                   type: 'array',
                   required: true,
-                  message: 'أختار المحافظة والمنطقة',
+                  message: '',
                 },
               ]}
             >
@@ -209,14 +207,23 @@ export default class OrderForm extends React.Component {
                 placeholder="المحافظة \ المنطقة"
               />
             </Form.Item>
-            <Form.Item name="street_name" rules={[{ required: true }]}>
+            <Form.Item
+              name="street_name"
+              rules={[{ required: true, message: '' }]}
+            >
               <Input placeholder="الشارع" />
             </Form.Item>
-            <Form.Item name="building_name" rules={[{ required: true }]}>
+            <Form.Item
+              name="building_name"
+              rules={[{ required: true, message: '' }]}
+            >
               <Input placeholder="رقم / أسم المبني" />
             </Form.Item>
 
-            <Form.Item name="floor_number" rules={[{ required: true }]}>
+            <Form.Item
+              name="floor_number"
+              rules={[{ required: true, message: '' }]}
+            >
               <InputNumber placeholder="الدور" style={{ width: '100%' }} />
             </Form.Item>
 

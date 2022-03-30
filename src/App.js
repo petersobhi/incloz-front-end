@@ -24,32 +24,25 @@ const App = () => (
       <img src={logo} className="app-logo" alt="Logo" />
     </Header>
     <Content>
-      {/* <Carousel>
+      <Carousel>
         <div className="cover">
-          <Row>
-            <Col span={12}>
-              <Title>Incloz</Title>
-              <Title level="2">h1. Ant Design</Title>
-            </Col>
-            <Col span={12}>col-12</Col>
-          </Row>
+          <Card
+            title="رفع طلب جديد"
+            bordered={false}
+            style={{
+              textAlign: 'center',
+              maxWidth: 700,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              margin: '50px auto',
+              opacity: 0.9,
+              borderRadius: 20,
+            }}
+          >
+            <OrderForm />
+          </Card>
         </div>
-        <div>
-          <h3 style={contentStyle}>2</h3>
-        </div>
-      </Carousel> */}
-      <Card
-        title="رفع طلب جديد"
-        bordered={false}
-        style={{
-          textAlign: 'center',
-          maxWidth: 700,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-        }}
-      >
-        <OrderForm />
-      </Card>
+      </Carousel>
     </Content>
     {/* <Footer>Footer</Footer> */}
   </Layout>
