@@ -84,7 +84,7 @@ export default class OrderForm extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8001/api/governorates')
+    fetch('http://54.159.230.213:8000/api/governorates')
       .then((response) => response.json())
       .then((res) => this.setState({ governorates: res }));
   }
@@ -102,7 +102,7 @@ export default class OrderForm extends React.Component {
       notes: values.notes,
     };
     console.log('Received values of form: ', values);
-    const rawResponse = await fetch('http://localhost:8001/api/orders', {
+    const rawResponse = await fetch('http://54.159.230.213:8000/api/orders', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
